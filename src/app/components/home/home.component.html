@@ -1,0 +1,21 @@
+<!-- <span [ngSwitch]="score">
+  <p *ngSwitchCase="1">
+    1111111111111
+  </p>
+  <p *ngSwitchCase="2">
+    <span [ngClass]="{'red': score == 2}">222222</span>
+  </p>
+  <p *ngSwitchDefault>
+      <span [ngClass]="{'sky': score == 3}">33333</span>
+  </p>
+</span> -->
+
+
+<!-- search -->
+<app-search [msg]="today" [run]="gg" (outer)="ssss($event)"></app-search>
+
+<h5 (click)="run()">
+  {{ today | date: 'yyyy-MM-dd HH:mm' }}
+  <span *ngIf="score" [ngClass]="{'red': score}">红色</span>
+  <span *ngIf="!score" [ngClass]="{'blue': !score}">蓝色</span>
+</h5>

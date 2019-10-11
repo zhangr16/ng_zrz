@@ -1,0 +1,22 @@
+<ol>
+  <li *ngFor="let item of items;let key = index">
+    <a [routerLink]="['/son']" [queryParams]="{aid: key}">
+      {{item}}
+    </a>
+  </li>
+</ol>
+<h2>动态路由</h2>
+<ul>
+  <li class="_li" *ngFor="let item of items;let key=index">
+    <a [routerLink]="['/son/', key]">
+      {{key}}---{{item}}
+    </a>
+    <a [routerLink]="['/father/son']" routerLinkActive="ss">
+      son1
+    </a>
+    <a [routerLink]="['/father/son2']" routerLinkActive="ss">
+      son22
+    </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

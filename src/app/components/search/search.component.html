@@ -1,0 +1,12 @@
+<div class="search">
+    <input class="inp" type="text" [(ngModel)]="msg" />
+    <button class="btn" (click)="add()">搜索</button>
+</div>
+<ul>
+  <li *ngFor="let item of historys;let key = index">
+    {{ item }}
+    <span (click)="delete(key)">x</span>
+  </li>
+</ul>
+<div (click)="run()">点击执行父组件方法</div>
+<button (click)="sendParent()">zi</button>

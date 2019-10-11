@@ -1,0 +1,14 @@
+<p>requester works!</p>
+<button (click)="getData()">get请求</button>
+<button (click)="postData()">post请求</button>
+<button (click)="jsonpData()">jsonp请求</button>
+<br>
+<br>
+<button (click)="axiosGet()">axiosGet</button>
+<button (click)="axiosPost()">axiosPost</button>
+
+<ul>
+  <li *ngFor="let item of menuData">
+    {{item._id}}<br> {{item.title}}
+  </li>
+</ul>

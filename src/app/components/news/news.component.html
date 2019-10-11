@@ -1,0 +1,27 @@
+<p>news works!  {{ title }}</p>
+<div [title] = "zrz">
+  <input type="text" [(ngModel)]='title' />
+</div>
+<span [innerHTML]="msg"></span>
+
+<h3 *ngIf="true" id="math"> 1 + 3 = {{1+3}}</h3>
+<ul>
+  <li *ngFor="let item of ngArr">{{item + 1}}</li>
+</ul>
+<h2 (click)="clickmsg()">{{ userList | json }}</h2>
+<ol>
+  <li *ngFor="let item of userList;let i = index">
+    {{item.user}}: {{ item.age }} + {{ i }}
+  </li>
+</ol>
+
+<div>
+  爱好： 
+  <span *ngFor="let item of userList;let key=index">
+      <input type="checkBox" [id]="'check' + key" [(ngModel)]="item.checked" />
+      <label>{{ item.user }}</label>
+  </span>
+</div>
+
+<div #mybox>11111</div>
+<app-home #home></app-home>
